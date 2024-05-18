@@ -1,0 +1,9 @@
+@import "../app/styles/variables.scss";
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $primary-grey-color;
+}
