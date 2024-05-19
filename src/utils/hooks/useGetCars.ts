@@ -17,8 +17,8 @@ export function useGetCars() {
         if (data.Response === "False") throw new Error("Машины не найдены");
 
         setCars(data);
-      } catch (error) {
-        console.log(error.message);
+      } catch (error: unknown) {
+        if (error instanceof Error) console.log(error.message);
       } finally {
         setIsLoading(false);
       }
