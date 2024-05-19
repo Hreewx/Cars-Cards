@@ -1,10 +1,11 @@
 // import { FaArrowDownLong } from "react-icons/fa6";
 
+import { ChangeEvent } from "react";
 import styles from "./Select.module.scss";
 
 interface SortProps {
-  sortOption: SortOption;
-  onHandleSelectChange: HandleSelectChange;
+  sortOption: string;
+  onHandleSelectChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const Select: React.FC<SortProps> = ({ onHandleSelectChange, sortOption }) => {
